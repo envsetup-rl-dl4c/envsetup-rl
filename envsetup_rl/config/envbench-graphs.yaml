@@ -54,7 +54,7 @@ critic:
     warmup_style: cosine
   ppo_micro_batch_size_per_gpu: 1
 custom:  # see envsetup_rl.hparams_entrypoint.py for usage
-  run_data_preprocess: False
+  run_data_preprocess: True
   run_training: True
   command: 'python3 -m envsetup_rl.trainer.multi_turn_main_ppo'
   save_all_checkpoints: True

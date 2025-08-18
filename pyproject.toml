@@ -27,9 +27,6 @@ include = ["envsetup_rl", "envsetup_rl.*"]
 [tool.uv]
 package = true
 
-[project.scripts]
-hparams-entrypoint = "envsetup_rl.hparams_entrypoint:__main__"
-
 [tool.uv.sources]
 verl = { path = "verl" }
 envbench_graphs = { git = "https://github.com/envsetup-rl-dl4c/EnvBench.git", subdirectory = "graphs" }
