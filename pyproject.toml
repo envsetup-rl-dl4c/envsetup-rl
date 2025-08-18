@@ -1,0 +1,47 @@
+[project]
+name = "envsetup-rl"
+version = "0.1.0"
+description = "Advancing Environment Setup LLMs through Online Reinforcement Learning"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bashlex>=0.18",
+    "boto3>=1.40.11",
+    "hydra-core>=1.3.2",
+    "langchain==0.3.27",
+    "langchain-openai==0.3.28",
+    "langgraph==0.4.7",
+    "s3fs>=0.4.2",
+    "verl",
+    "envbench_graphs",
+    "langchain-core==0.3.72",
+    "langgraph-prebuilt==0.2.2",
+    "langgraph-sdk==0.1.70",
+    "python-dotenv>=1.1.1",
+]
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["envsetup_rl", "envsetup_rl.*"]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+hparams-entrypoint = "envsetup_rl.hparams_entrypoint:__main__"
+
+[tool.uv.sources]
+verl = { path = "verl" }
+envbench_graphs = { git = "https://github.com/envsetup-rl-dl4c/EnvBench.git", subdirectory = "graphs" }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.9",
+    "ty>=0.0.1a18",
+]
+
+[tool.ty.src]
+exclude = ["verl"]
+
+[tool.ruff]
+exclude = ["verl"]
