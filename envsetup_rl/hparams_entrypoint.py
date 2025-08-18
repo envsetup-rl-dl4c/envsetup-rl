@@ -11,7 +11,7 @@ import hydra
 import yaml
 from omegaconf import DictConfig, OmegaConf
 
-from envsetup_rl.trainer.config.envsetup.config_resolvers import register_all_resolvers
+from envsetup_rl.config.config_resolvers import register_all_resolvers
 from envsetup_rl.upload_hf_checkpoint import main as upload_hf_checkpoint
 
 logging.basicConfig(
@@ -52,7 +52,7 @@ def generate_entrypoint_script(cfg: DictConfig) -> str:
     return cmd
 
 
-@hydra.main(config_path="trainer/config/envsetup", config_name="envbench-graphs", version_base=None)
+@hydra.main(config_path="config", config_name="envbench-graphs", version_base=None)
 def main(cfg: DictConfig) -> float:
     """
     Main entry point for experiment.
