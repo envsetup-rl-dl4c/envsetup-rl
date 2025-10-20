@@ -1,3 +1,13 @@
+# 📢 DL4C submission snapshot
+<img src="https://github.com/JetBrains-Research/PIPer/raw/main/misc/piper-logo.png" alt="PIPer Mascot" style="vertical-align: middle; height: 3em; margin-right: 0.2em;">
+
+This repository contains the code used for the DL4C submission and is not kept up to date. For the current codebase and ongoing work, please refer to the **PIPer** GitHub repositories: <a href="https://github.com/JetBrains-Research/PIPer">JetBrains-Research/PIPer</a>.
+
+[![Models](https://img.shields.io/badge/🤗%20Hugging%20Face-Models-orange.svg)](https://jb.gg/PIPer)
+[![Dataset](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-green.svg)](https://huggingface.co/datasets/JetBrains-Research/PIPer-envbench-zeroshot-rl)
+
+---
+
 # Advancing Environment Setup LLMs through Online Reinforcement Learning
 
 Code, checkpoints and dataset for the paper "Advancing Environment Setup LLMs through Online Reinforcement Learning".
